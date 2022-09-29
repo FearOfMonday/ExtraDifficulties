@@ -1,0 +1,51 @@
+{
+  "${ModID}:AscensionPowerModifiers": {
+    "TEXT": [
+      "+",
+	  "Gain #b", 
+	  "% less #yBlock from cards for #b",
+	  "#yAttacks deal #b",
+      "% less damage for #b",
+	  "Receive #b",
+      "% more damage from #yAttacks for #b",
+      " turn.",
+      " turns.",
+	  "Cannot be removed from your deck."
+    ]
+  },
+  "${ModID}:CurseDescriptions": {
+    "TEXT": [
+      "Start each run extra cursed.",
+	  "Start each run with a prideful curse instead."
+    ]
+  },
+  "${ModID}:WeakDescriptions": {
+    "TEXT": [
+      "Deal 10% less damage when weakened.",
+	  "Deal 20% less damage when weakened.",
+	  "Deal 30% less damage when weakened."
+    ]
+  },
+  "${ModID}:FrailDescriptions": {
+    "TEXT": [
+      "Gain 10% less block when frail.",
+	  "Gain 20% less block when frail.",
+	  "Gain 30% less block when frail."
+    ]
+  },
+  "${ModID}:VulnDescriptions": {
+    "TEXT": [
+      "Take 10% additional damage when vulnerable.",
+	  "Take 20% additional damage when vulnerable.",
+	  "Take 30% additional damage when vulnerable."
+    ]
+  },
+  "${ModID}:AscensionNames": {
+    "TEXT": [
+      "Cursed Plus",
+	  "Weakened Plus",
+	  "Frail Plus",
+	  "Vulnerable Plus"
+    ]
+  }
+}
