@@ -53,7 +53,7 @@
             <artifactId>ascensionmanager</artifactId>
             <version>1.0.0</version>
             <scope>system</scope>
-            <systemPath>${Steam.path}/common/SlayTheSpire/mods/AscensionManager.jar</systemPath>
+            <systemPath>${Steam.path}/workshop/content/646570/2870621729/AscensionManager.jar</systemPath>
         </dependency>
     </dependencies>
 

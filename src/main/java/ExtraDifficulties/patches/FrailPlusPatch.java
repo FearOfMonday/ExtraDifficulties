@@ -1,6 +1,6 @@
 package ExtraDifficulties.patches;
 
-import AscensionExtra.buttons.AscensionManager;
+import AscensionExtra.AscensionMod;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.powers.FrailPower;
 
@@ -14,8 +14,8 @@ public class FrailPlusPatch {
 
         @SpirePrefixPatch
         public static void frailer(@ByRef Float[] blockAmount) {
-            if (AscensionManager.getAscensionLvl(makeID("MoreFrail")) >= 1) {
-                blockAmount[0] *= (1.0F - (0.1F * AscensionManager.getAscensionLvl(makeID("MoreFrail"))));
+            if (AscensionMod.isLvlActive(makeID("MoreFrail"), 1)) {
+                blockAmount[0] *= (1.0F - (0.1F * AscensionMod.getAscensionLvl(makeID("MoreFrail"))));
             }
         }
     }
@@ -25,9 +25,9 @@ public class FrailPlusPatch {
 
         @SpirePostfixPatch
         public static void namer(FrailPower __instance) {
-            if (AscensionManager.getAscensionLvl(makeID("MoreFrail")) >= 1) {
+            if (AscensionMod.isLvlActive(makeID("MoreFrail"), 1)) {
                 StringBuilder sb = new StringBuilder();
-                for (int i = 0; i < AscensionManager.getAscensionLvl(makeID("MoreFrail")); i++) sb.append(TEXT[0]);
+                for (int i = 0; i < AscensionMod.getAscensionLvl(makeID("MoreFrail")); i++) sb.append(TEXT[0]);
                 __instance.name += sb.toString();
             }
         }
@@ -38,11 +38,11 @@ public class FrailPlusPatch {
 
         @SpirePostfixPatch
         public static void descripter(FrailPower __instance) {
-            if (AscensionManager.getAscensionLvl(makeID("MoreFrail")) >= 1) {
+            if (AscensionMod.isLvlActive(makeID("MoreFrail"), 1)) {
                 if (__instance.amount == 1) {
-                    __instance.description = TEXT[1] + (25f + (7.5f * AscensionManager.getAscensionLvl(makeID("MoreFrail")))) + TEXT[2] + __instance.amount + TEXT[7];
+                    __instance.description = TEXT[1] + (25f + (7.5f * AscensionMod.getAscensionLvl(makeID("MoreFrail")))) + TEXT[2] + __instance.amount + TEXT[7];
                 } else {
-                    __instance.description = TEXT[1] + (25f + (7.5f * AscensionManager.getAscensionLvl(makeID("MoreFrail")))) + TEXT[2] + __instance.amount + TEXT[8];
+                    __instance.description = TEXT[1] + (25f + (7.5f * AscensionMod.getAscensionLvl(makeID("MoreFrail")))) + TEXT[2] + __instance.amount + TEXT[8];
                 }
             }
         }

@@ -1,4 +1,9 @@
 {
+  "${ModID}:ModSettings": {
+    "TEXT": [
+      "Unlock all levels instantly."
+    ]
+  },
   "${ModID}:AscensionPowerModifiers": {
     "TEXT": [
       "+",
@@ -40,12 +45,21 @@
 	  "Take 30% additional damage when vulnerable."
     ]
   },
+  "${ModID}:HardshipsDesc": {
+    "TEXT": [
+      "Harder encounters are fought earlier in act 1.",
+	  "Harder encounters are fought earlier in act 2.",
+	  "Harder encounters are fought earlier in act 3.",
+	  "Harder encounters are fought even earlier in act 1."
+    ]
+  },
   "${ModID}:AscensionNames": {
     "TEXT": [
       "Cursed Plus",
 	  "Weakened Plus",
 	  "Frail Plus",
-	  "Vulnerable Plus"
+	  "Vulnerable Plus",
+	  "Early Hardships"
     ]
   }
 }

@@ -1,6 +1,6 @@
 package ExtraDifficulties.patches;
 
-import AscensionExtra.buttons.AscensionManager;
+import AscensionExtra.AscensionMod;
 import ExtraDifficulties.cardMods.SoulBoundMod;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -21,11 +21,11 @@ public class ExtraAscendersBanePatch {
 
         @SpireInsertPatch(locator = Locator.class)
         public static void bane() {
-            if (AscensionManager.getAscensionLvl(makeID("MoreCurses")) == 1) {
+            if (AscensionMod.getAscensionLvl(makeID("MoreCurses")) == 1) {
                 AbstractDungeon.player.masterDeck.addToTop(new AscendersBane());
                 UnlockTracker.markCardAsSeen("AscendersBane");
             }
-            if (AscensionManager.getAscensionLvl(makeID("MoreCurses")) >= 2) {
+            if (AscensionMod.isLvlActive(makeID("MoreCurses"), 2)) {
                 AbstractDungeon.player.masterDeck.removeCard("AscendersBane");
                 AbstractCard card = new Pride();
                 CardModifierManager.addModifier(card, new SoulBoundMod());
